@@ -76,4 +76,16 @@ Header files for development with %{name}.
 
 #find_lang %name
 
-%files
+%files -n %{libname}
+%{_libdir}/libpanel-%{api}.so.%{api}.*
+
+%files -n %{giradwaitaname}
+%{_libdir}/girepository-1.0/Panel-%{api}.typelib
+
+%files -n %{devname}
+%{_includedir}/libpanel-1
+%{_libdir}/pkgconfig/libpanel-1.pc
+%{_datadir}/gir-1.0/Panel-1.gir
+%{_datadir}/vala/vapi/libpanel-1.deps
+%{_datadir}/vala/vapi/libpanel-1.vapi
+%{_iconsdir}/hicolor/scalable/actions/panel-*
