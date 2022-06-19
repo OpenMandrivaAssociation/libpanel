@@ -7,7 +7,7 @@
 
 %define	git	20220610.alpha
 
-Name:		libadwaita
+Name:		libpanel
 Version:	1.0.0
 Release:	0.%{git}.0
 Summary:	A dock/panel library for GTK 4
