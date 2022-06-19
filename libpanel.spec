@@ -5,7 +5,7 @@
 %define giradwaitaname %mklibname panel-gir %{api}
 %define devname %mklibname panel -d
 
-%define	git	20220610.alpha
+%define	git	20220610.alpha0
 
 Name:		libpanel
 Version:	1.0.0
