@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gi-docgen)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk4)
+BuildRequires:  pkgconfig(gtksourceview-5)
 
 %description
 Libpanel helps you create IDE-like applications using GTK 4 and libadwaita.
