@@ -8,13 +8,13 @@
 %define	git	20220610.alpha0
 
 Name:		libpanel
-Version:	1.0.0
-Release:	0.%{git}.0
+Version:	1.0.1
+Release:	1
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
 Group:		Development/GNOME and GTK+
 URL:		https://gitlab.gnome.org/chergert/libpanel/
-Source0:	https://gitlab.gnome.org/chergert/libpanel/-/archive/main/libpanel-main.tar.bz2
+Source0:	https://gitlab.gnome.org/GNOME/libpanel/-/archive/%{version}/libpanel-%{version}.tar.bz2
 
 BuildRequires:	cmake
 BuildRequires:	meson
@@ -65,7 +65,7 @@ Header files for development with %{name}.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-main
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 %meson
@@ -75,15 +75,16 @@ Header files for development with %{name}.
 %install
 %meson_install
 
-#find_lang %name
+%find_lang %name
 
-%files -n %{libname}
+%files -n %{libname} -f %{name}.lang
 %{_libdir}/libpanel-%{api}.so.%{api}*
 
 %files -n %{giradwaitaname}
 %{_libdir}/girepository-1.0/Panel-%{api}.typelib
 
 %files -n %{devname}
+%doc %{_datadir}/doc/panel-1.0/
 %{_includedir}/libpanel-1
 %{_libdir}/libpanel-1.so
 %{_libdir}/pkgconfig/libpanel-1.pc
