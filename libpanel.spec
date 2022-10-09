@@ -75,15 +75,16 @@ Header files for development with %{name}.
 %install
 %meson_install
 
-#find_lang %name
+%find_lang %name
 
-%files -n %{libname}
+%files -n %{libname} -f %{name}.lang
 %{_libdir}/libpanel-%{api}.so.%{api}*
 
 %files -n %{giradwaitaname}
 %{_libdir}/girepository-1.0/Panel-%{api}.typelib
 
 %files -n %{devname}
+%doc %{_datadir}/doc/panel-1.0/
 %{_includedir}/libpanel-1
 %{_libdir}/libpanel-1.so
 %{_libdir}/pkgconfig/libpanel-1.pc
