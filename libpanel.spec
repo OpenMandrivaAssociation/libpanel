@@ -9,7 +9,7 @@
 
 Name:		libpanel
 Version:	1.2.0
-Release:	1
+Release:	2
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
 Group:		Development/GNOME and GTK+
