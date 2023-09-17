@@ -8,8 +8,8 @@
 %define	git	20220610.alpha0
 
 Name:		libpanel
-Version:	1.2.0
-Release:	2
+Version:	1.4.0
+Release:	1
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
 Group:		Development/GNOME and GTK+
