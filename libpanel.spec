@@ -1,14 +1,15 @@
 %define api 1
 %define major 0
 
-%define libname %mklibname panel %{api} %{major}
+%define libname %mklibname panel
+%define oldlibname %mklibname panel 1 0
 %define giradwaitaname %mklibname panel-gir %{api}
 %define devname %mklibname panel -d
 
 %define	git	20220610.alpha0
 
 Name:		libpanel
-Version:	1.4.0
+Version:	1.4.1
 Release:	1
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
@@ -37,6 +38,7 @@ design and implementation focus around GNOME Builder and Drafting projects.
 %package -n %{libname}
 Summary:	A GTK4/libadwaita library to develop IDE-like application
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package provides the shared library for libpanel, a library to
