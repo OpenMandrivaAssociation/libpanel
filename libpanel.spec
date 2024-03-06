@@ -1,20 +1,20 @@
 %define api 1
 %define major 0
 
-%define libname %mklibname panel
+# The name libpanel is taken by ncurses. While
+# "%mklibname panel" clashes with a core package.
+%define libname %mklibname panel-1
 %define oldlibname %mklibname panel 1 0
 %define giradwaitaname %mklibname panel-gir %{api}
-%define devname %mklibname panel -d
-
-%define	git	20220610.alpha0
+%define devname %mklibname panel-1 -d
 
 Name:		libpanel
 Version:	1.4.1
-Release:	1
+Release:	2
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
 Group:		Development/GNOME and GTK+
-URL:		https://gitlab.gnome.org/chergert/libpanel/
+URL:		https://gitlab.gnome.org/GNOME/libpanel/
 Source0:	https://gitlab.gnome.org/GNOME/libpanel/-/archive/%{version}/libpanel-%{version}.tar.bz2
 
 BuildRequires:	cmake
