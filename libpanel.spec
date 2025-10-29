@@ -9,7 +9,7 @@
 %define devname %mklibname panel-1 -d
 
 Name:		libpanel
-Version:	1.10.2
+Version:	1.10.3
 Release:	1
 Summary:	A dock/panel library for GTK 4
 License:	LGPLv3
